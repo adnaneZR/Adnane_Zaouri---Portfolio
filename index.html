@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adnane Zaouri - Cybersecurity Specialist</title>
+    <title>Adnane Zaouri - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -11,43 +11,96 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ffffff; scroll-behavior: smooth; cursor: none; }
-        .custom-cursor { position: fixed; width: 20px; height: 20px; border: 2px solid #00ff99; border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); transition: all 0.1s ease; z-index: 9999; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .grain::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABlBMVEUAAAD///+l2Z/dAAAASUlEQVR4Ae3BgQAAAADDoPtTH+hu9QAAAAAElFTkSuQmCC') repeat; opacity: 0.05; pointer-events: none; }
-        .progress-circle { stroke-dasharray: 283; stroke-dashoffset: 283; transition: stroke-dashoffset 2s ease-out; }
-        .progress-circle.fill { stroke-dashoffset: 0; }
-        @media (max-width: 768px) { .custom-cursor { display: none; } }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            scroll-behavior: smooth;
+            cursor: none;
+        }
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00ff99;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: all 0.1s ease;
+            z-index: 9999;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .grain {
+            position: relative;
+            overflow: hidden;
+        }
+        .grain::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABlBMVEUAAAD///+l2Z/dAAAASUlEQVR4Ae3BgQAAAADDoPtTH+hu9QAAAAAElFTkSuQmCC') repeat;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        .progress-circle {
+            stroke-dasharray: 283;
+            stroke-dashoffset: 283;
+            transition: stroke-dashoffset 2s ease-out;
+        }
+        .progress-circle.fill {
+            stroke-dashoffset: 0;
+        }
+        @media (max-width: 768px) {
+            .custom-cursor {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="relative">
     <div class="custom-cursor" id="cursor"></div>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section id="hero" class="h-screen flex flex-col justify-center items-center relative overflow-hidden">
-        <div id="particles-js" class="absolute inset-0"></div>
+        <div id="particles-js" class="absolute top-0 left-0 w-full h-full"></div>
         <img src="profile.jpg" alt="Adnane Zaouri" class="w-32 h-32 rounded-full border-4 border-[#00ff99] mb-6" data-aos="fade-up">
-        <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold mb-4" data-aos="fade-up" data-aos-delay="200">Adnane Zaouri</h1>
-        <p class="text-xl sm:text-2xl md:text-4xl text-[#00ff99] text-center max-w-3xl px-4" id="typing-tagline"></p>
+        <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold text-white mb-4" data-aos="fade-up">Adnane Zaouri</h1>
+        <p class="text-xl sm:text-2xl md:text-4xl text-[#00ff99] text-center max-w-2xl" id="typing-tagline"></p>
         <div class="absolute bottom-10 animate-bounce">
-            <svg class="w-8 h-8 text-[#00ff99]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            <svg class="w-6 h-6 text-[#00ff99]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="py-20 px-6 md:px-20 grain relative">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12" data-aos="fade-up">
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 md:px-20 grain">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10" data-aos="fade-up">
             <img src="profile.jpg" alt="Adnane Zaouri" class="w-56 h-56 rounded-full border-4 border-[#00ff99] shadow-2xl">
             <div>
-                <h2 class="text-4xl font-bold mb-6">À propos de moi</h2>
-                <p class="text-lg mb-6 leading-relaxed">
-                    Technicien spécialisé en infrastructures digitales avec une spécialisation en cybersécurité. Passionné par les défis techniques liés à la sécurité informatique, je suis sérieux, curieux et engagé, prêt à contribuer à la protection et à l'optimisation des systèmes d'information au sein d'une équipe dynamique.
-                </p>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6">À propos de moi</h2>
+                <p class="text-base md:text-lg mb-4">Technicien spécialisé en infrastructure digitale avec une spécialisation en cybersécurité, je suis diplômé et motivé à mettre mes compétences au service d'une entreprise innovante. Passionné par les défis techniques liés à la sécurité informatique, je suis sereux, curieux et engagé, prêt à contribuer à la protection et à l'optimisation des systèmes d'information au sein d'une équipe dynamique.</p>
+                <h3 class="text-xl sm:text-2xl font-bold mb-4">Langues</h3>
                 <div class="flex flex-wrap gap-4 mb-6">
-                    <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full font-medium">Arabe •••••</span>
-                    <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full font-medium">Français •••••</span>
-                    <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full font-medium">Anglais •••</span>
+                    <span class="bg-[#00ff99] text-black px-3 py-1 rounded-full">Arabe •••••</span>
+                    <span class="bg-[#00ff99] text-black px-3 py-1 rounded-full">Français ••••</span>
+                    <span class="bg-[#00ff99] text-black px-3 py-1 rounded-full">Anglais ••••</span>
                 </div>
+                <h3 class="text-xl sm:text-2xl font-bold mb-4">Centres d'intérêt</h3>
+                <ul class="list-disc ml-5 text-base md:text-lg">
+                    <li>Football</li>
+                    <li>Bricolage</li>
+                    <li>Esprit analytique</li>
+                    <li>Résolution de problèmes</li>
+                    <li>Travail d'équipe</li>
+                    <li>Adaptabilité</li>
+                    <li>Créativité</li>
+                </ul>
                 <a href="cv-adnane-zaouri.pdf" download class="bg-[#00ff99] text-black px-8 py-4 rounded-full font-bold hover:bg-[#00cc7a] transition inline-flex items-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     Télécharger mon CV
@@ -56,8 +109,8 @@
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="py-20 px-6 md:px-20 bg-[#0a0a0a] grain">
+     <!-- Projects -->
+     <section id="projects" class="py-20 px-6 md:px-20 bg-[#0a0a0a] grain">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-12">Projets</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -84,15 +137,142 @@
         </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="py-20 px-6 md:px-20 grain">
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 md:px-20 grain">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-12">Compétences</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-center">Expérience</h2>
+            <div class="relative">
+                <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full border-l-2 border-dashed border-[#00ff99]"></div>
+                <div class="space-y-10">
+                    <div class="relative flex justify-start md:justify-center" data-aos="fade-right">
+                        <div class="bg-[#0a0a0a] p-6 glass rounded-lg w-full md:w-1/2 ml-8 md:ml-0">
+                            <img src="https://via.placeholder.com/100?text=ABIRNET" alt="ABIRNET Logo" class="w-16 h-16 mb-4 rounded-full">
+                            <h3 class="text-xl sm:text-2xl font-bold">Soc Analyst</h3>
+                            <p class="text-[#00ff99]">ABIRNET, Sale • 2025</p>
+                            <ul class="list-disc ml-5 mt-4 text-base md:text-lg">
+                                <li>Projet : Surveillance et protection cybersécurité automatisée</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 md:px-20 bg-[#0a0a0a] grain">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-center">Compétences</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div data-aos="fade-up"><h3 class="text-2xl font-bold mb-4">Outils SIEM & SOAR</h3><p>Wazuh, The Hive, Shuffle, VirusTotal</p></div>
-                <div data-aos="fade-up"><h3 class="text-2xl font-bold mb-4">Pentesting</h3><p>Nmap, Metasploit, Burp Suite, Wireshark</p></div>
-                <div data-aos="fade-up"><h3 class="text-2xl font-bold mb-4">Réseaux & Firewall</h3><p>pfSense, Cisco Packet Tracer</p></div>
-                <div data-aos="fade-up"><h3 class="text-2xl font-bold mb-4">Virtualisation</h3><p>Docker, VMware, VirtualBox</p></div>
+                <div data-aos="fade-up">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Systèmes d'exploitation</h3>
+                    <div class="mb-4 flex items-center gap-4">
+                        <p class="text-base md:text-lg">Linux (administration, commandes avancées)</p>
+                        <svg class="w-20 h-20 min-w-[5rem]" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="#333" stroke-width="10" fill="none"/>
+                            <circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="10" fill="none" class="progress-circle" style="stroke-dashoffset: 56.6;"/>
+                        </svg>
+                    </div>
+                </div>
+                <div data-aos="fade-up">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Programmation</h3>
+                    <div class="mb-4 flex items-center gap-4">
+                        <p class="text-base md:text-lg">Python (scripts automatisés, sécurité)</p>
+                        <svg class="w-20 h-20 min-w-[5rem]" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="#333" stroke-width="10" fill="none"/>
+                            <circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="10" fill="none" class="progress-circle" style="stroke-dashoffset: 56.6;"/>
+                        </svg>
+                    </div>
+                    <div class="mb-4 flex items-center gap-4">
+                        <p class="text-base md:text-lg">PowerShell (administration et gestion des systèmes)</p>
+                        <svg class="w-20 h-20 min-w-[5rem]" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="#333" stroke-width="10" fill="none"/>
+                            <circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="10" fill="none" class="progress-circle" style="stroke-dashoffset: 56.6;"/>
+                        </svg>
+                    </div>
+                </div>
+                <div data-aos="fade-up">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Bureautique</h3>
+                    <div class="mb-4 flex items-center gap-4">
+                        <p class="text-base md:text-lg">Excel, Word, PowerPoint pour la gestion et la documentation</p>
+                        <svg class="w-20 h-20 min-w-[5rem]" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="#333" stroke-width="10" fill="none"/>
+                            <circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="10" fill="none" class="progress-circle" style="stroke-dashoffset: 56.6;"/>
+                        </svg>
+                    </div>
+                </div>
+                <div data-aos="fade-up">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Réseaux</h3>
+                    <div class="mb-4 flex items-center gap-4">
+                        <p class="text-base md:text-lg">Cisco Packet Tracer (simulation et configuration réseau)</p>
+                        <svg class="w-20 h-20 min-w-[5rem]" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="#333" stroke-width="10" fill="none"/>
+                            <circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="10" fill="none" class="progress-circle" style="stroke-dashoffset: 56.6;"/>
+                        </svg>
+                    </div>
+                    <div class="mb-4 flex items-center gap-4">
+                        <p class="text-base md:text-lg">pfSense (configuration de pare-feu et réseaux)</p>
+                        <svg class="w-20 h-20 min-w-[5rem]" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="#333" stroke-width="10" fill="none"/>
+                            <circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="10" fill="none" class="progress-circle" style="stroke-dashoffset: 56.6;"/>
+                        </svg>
+                    </div>
+                </div>
+                <div data-aos="fade-up">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Pentesting</h3>
+                    <div class="mb-4 flex items-center gap-4">
+                        <p class="text-base md:text-lg">Outils de pentesting (Nmap, Metasploit, Burp Suite, Wireshark, VirusTotal)</p>
+                        <svg class="w-20 h-20 min-w-[5rem]" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="#333" stroke-width="10" fill="none"/>
+                            <circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="10" fill="none" class="progress-circle" style="stroke-dashoffset: 56.6;"/>
+                        </svg>
+                    </div>
+                </div>
+                <div data-aos="fade-up">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Virtualisation & Cloud</h3>
+                    <div class="mb-4 flex items-center gap-4">
+                        <p class="text-base md:text-lg">Notions de base sur VMware, VirtualBox, Docker et les concepts cloud (AWS, Azure)</p>
+                        <svg class="w-20 h-20 min-w-[5rem]" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="#333" stroke-width="10" fill="none"/>
+                            <circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="10" fill="none" class="progress-circle" style="stroke-dashoffset: 56.6;"/>
+                        </svg>
+                    </div>
+                </div>
+                <div data-aos="fade-up">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4">Outils SIEM</h3>
+                    <div class="mb-4 flex items-center gap-4">
+                        <p class="text-base md:text-lg">Utilisation des outils : Wazuh, The Hive, Shuffle</p>
+                        <svg class="w-20 h-20 min-w-[5rem]" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" stroke="#333" stroke-width="10" fill="none"/>
+                            <circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="10" fill="none" class="progress-circle" style="stroke-dashoffset: 56.6;"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 md:px-20 grain">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-center">Formation</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-6 rounded-lg" data-aos="fade-up">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-2">Diplôme de technician spécialisé en cybersécurité</h3>
+                    <p class="text-[#00ff99]">ISTA NTIC RABAT</p>
+                    <p>2023 - 2025</p>
+                    <p class="text-base md:text-lg">Certificates: Agile Explorer, Cybersecurity Fundamentals</p>
+                </div>
+                <div class="glass p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-2">Etudiant dans la faculté des Sciences</h3>
+                    <p class="text-[#00ff99]">Rabat</p>
+                    <p>2022 - 2023</p>
+                </div>
+                <div class="glass p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-2">Baccalauréat en science physique</h3>
+                    <p class="text-[#00ff99]">Lycée Fakih Mohamed El Mini</p>
+                    <p>2022</p>
+                </div>
             </div>
         </div>
     </section>
@@ -115,31 +295,53 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 text-center text-sm">
-        <p>© 2025 Adnane Zaouri. Tous droits réservés.</p>
-        <p class="mt-2">Built with AI • Hosted on GitHub Pages</p>
+    <footer class="py-6 text-center text-sm">
+        <p>Copyright © 2025 Adnane Zaouri. All rights reserved.</p>
         <a href="#hero" class="text-[#00ff99] hover:underline">Retour en haut</a>
     </footer>
 
     <script>
-        // Cursor
+        // Custom Cursor
+        const cursor = document.getElementById('cursor');
         document.addEventListener('mousemove', e => {
-            document.getElementById('cursor').style.left = e.clientX + 'px';
-            document.getElementById('cursor').style.top = e.clientY + 'px';
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
         });
 
         // Particles
-        particlesJS('particles-js', { particles: { number: { value: 80 }, color: { value: '#00ff99' }, shape: { type: 'circle' }, opacity: { value: 0.5 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: '#00ff99', opacity: 0.4, width: 1 }, move: { enable: true, speed: 2 } }, interactivity: { events: { onhover: { enable: true, mode: 'repulse' } } } });
-
-        // Typing
-        new Typed('#typing-tagline', {
-            strings: ['Spécialiste en Cybersécurité', 'SOC Analyst', 'Pentester en formation'],
-            typeSpeed: 60,
-            backSpeed: 30,
-            loop: true
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#00ff99' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#00ff99', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+            },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true }, modes: { repulse: { distance: 100, duration: 0.4 } } },
+            retina_detect: true
         });
 
+        // Typing Animation
+        new Typed('#typing-tagline', {
+            strings: ['Technicien spécialisé en infrastructure digitale avec une spécialisation en cybersécurité'],
+            typeSpeed: 50,
+            loop: false
+        });
+
+        // AOS Init
         AOS.init({ duration: 1000 });
+
+        // Progress Fill on Scroll
+        window.addEventListener('scroll', () => {
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection.getBoundingClientRect().top < window.innerHeight) {
+                document.querySelectorAll('.progress-circle').forEach(circle => {
+                    circle.classList.add('fill');
+                });
+            }
+        });
     </script>
 </body>
 </html>
