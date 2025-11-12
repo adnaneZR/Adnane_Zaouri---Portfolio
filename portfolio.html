@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adnane Zaouri - Cybersecurity Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ffffff; scroll-behavior: smooth; cursor: none; }
+        .custom-cursor { position: fixed; width: 20px; height: 20px; border: 2px solid #00ff99; border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); transition: all 0.1s ease; z-index: 9999; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .grain::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABlBMVEUAAAD///+l2Z/dAAAASUlEQVR4Ae3BgQAAAADDoPtTH+hu9QAAAAAElFTkSuQmCC') repeat; opacity: 0.05; pointer-events: none; }
+        .progress-circle { stroke-dasharray: 283; stroke-dashoffset: 283; transition: stroke-dashoffset 2s ease-out; }
+        .progress-circle.fill { stroke-dashoffset: 0; }
+        @media (max-width: 768px) { .custom-cursor { display: none; } }
+    </style>
+</head>
+<body class="relative">
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Hero -->
+    <section id="hero" class="h-screen flex flex-col justify-center items-center relative overflow-hidden">
+        <div id="particles-js" class="absolute inset-0"></div>
+        <img src="profile.jpg" alt="Adnane Zaouri" class="w-32 h-32 rounded-full border-4 border-[#00ff99] mb-6" data-aos="fade-up">
+        <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold mb-4" data-aos="fade-up" data-aos-delay="200">Adnane Zaouri</h1>
+        <p class="text-xl sm:text-2xl md:text-4xl text-[#00ff99] text-center max-w-3xl px-4" id="typing-tagline"></p>
+        <div class="absolute bottom-10 animate-bounce">
+            <svg class="w-8 h-8 text-[#00ff99]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 px-6 md:px-20 grain relative">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12" data-aos="fade-up">
+            <img src="profile.jpg" alt="Adnane Zaouri" class="w-56 h-56 rounded-full border-4 border-[#00ff99] shadow-2xl">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">À propos de moi</h2>
+                <p class="text-lg mb-6 leading-relaxed">
+                    Technicien spécialisé en infrastructures digitales avec une spécialisation en cybersécurité. Passionné par les défis techniques liés à la sécurité informatique, je suis sérieux, curieux et engagé, prêt à contribuer à la protection et à l'optimisation des systèmes d'information au sein d'une équipe dynamique.
+                </p>
+                <div class="flex flex-wrap gap-4 mb-6">
+                    <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full font-medium">Arabe •••••</span>
+                    <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full font-medium">Français •••••</span>
+                    <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full font-medium">Anglais •••</span>
+                </div>
+                <a href="cv-adnane-zaouri.pdf" download class="bg-[#00ff99] text-black px-8 py-4 rounded-full font-bold hover:bg-[#00cc7a] transition inline-flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Télécharger mon CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 px-6 md:px-20 bg-[#0a0a0a] grain">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Projets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="glass p-8 rounded-xl" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-4">Surveillance & Protection Automatisée</h3>
+                    <p class="mb-6">Déploiement d’un SOC avec Wazuh, The Hive, Shuffle et Docker pour la détection et réponse automatisée aux menaces.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full text-sm">Wazuh</span>
+                        <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full text-sm">The Hive</span>
+                        <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full text-sm">Shuffle</span>
+                        <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full text-sm">Docker</span>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-4">Pentesting EternalBlue (SMB)</h3>
+                    <p class="mb-6">Exploitation de la vulnérabilité EternalBlue sur Windows via Metasploit pour démontrer l’impact d’une faille non patchée.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full text-sm">Metasploit</span>
+                        <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full text-sm">SMB</span>
+                        <span class="bg-[#00ff99] text-black px-4 py-2 rounded-full text-sm">Kali Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-20 px-6 md:px-20 grain">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Compétences</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div data-aos="fade-up"><h3 class="text-2xl font-bold mb-4">Outils SIEM & SOAR</h3><p>Wazuh, The Hive, Shuffle, VirusTotal</p></div>
+                <div data-aos="fade-up"><h3 class="text-2xl font-bold mb-4">Pentesting</h3><p>Nmap, Metasploit, Burp Suite, Wireshark</p></div>
+                <div data-aos="fade-up"><h3 class="text-2xl font-bold mb-4">Réseaux & Firewall</h3><p>pfSense, Cisco Packet Tracer</p></div>
+                <div data-aos="fade-up"><h3 class="text-2xl font-bold mb-4">Virtualisation</h3><p>Docker, VMware, VirtualBox</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-6 md:px-20 bg-[#0a0a0a] grain">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12">Me contacter</h2>
+            <form action="https://formspree.io/f/xdknwzkj" method="POST" class="glass p-10 rounded-2xl max-w-lg mx-auto" data-aos="fade-up">
+                <input type="text" name="name" placeholder="Votre nom" required class="w-full mb-6 p-4 bg-transparent border border-[#00ff99] rounded-lg text-white">
+                <input type="email" name="email" placeholder="Votre email" required class="w-full mb-6 p-4 bg-transparent border border-[#00ff99] rounded-lg text-white">
+                <textarea name="message" placeholder="Votre message" required class="w-full mb-6 p-4 bg-transparent border border-[#00ff99] rounded-lg text-white h-40"></textarea>
+                <button type="submit" class="bg-[#00ff99] text-black px-10 py-4 rounded-full font-bold hover:bg-[#00cc7a] transition w-full">Envoyer le message</button>
+            </form>
+            <div class="mt-12 flex justify-center gap-8 text-3xl">
+                <a href="mailto:adnanezaouri@gmail.com" class="hover:text-[#00ff99] transition">Email</a>
+                <a href="https://www.linkedin.com/in/adnane-zaouri-16848021a/" target="_blank" class="hover:text-[#00ff99] transition">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm">
+        <p>© 2025 Adnane Zaouri. Tous droits réservés.</p>
+        <p class="mt-2">Built with AI • Hosted on GitHub Pages</p>
+        <a href="#hero" class="text-[#00ff99] hover:underline">Retour en haut</a>
+    </footer>
+
+    <script>
+        // Cursor
+        document.addEventListener('mousemove', e => {
+            document.getElementById('cursor').style.left = e.clientX + 'px';
+            document.getElementById('cursor').style.top = e.clientY + 'px';
+        });
+
+        // Particles
+        particlesJS('particles-js', { particles: { number: { value: 80 }, color: { value: '#00ff99' }, shape: { type: 'circle' }, opacity: { value: 0.5 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: '#00ff99', opacity: 0.4, width: 1 }, move: { enable: true, speed: 2 } }, interactivity: { events: { onhover: { enable: true, mode: 'repulse' } } } });
+
+        // Typing
+        new Typed('#typing-tagline', {
+            strings: ['Spécialiste en Cybersécurité', 'SOC Analyst', 'Pentester en formation'],
+            typeSpeed: 60,
+            backSpeed: 30,
+            loop: true
+        });
+
+        AOS.init({ duration: 1000 });
+    </script>
+</body>
+</html>
